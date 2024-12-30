@@ -8,11 +8,14 @@ The goal is to implement MPC for various control scenarios to regulate the level
 
 - **Initial State Values**: \([h_1, h_2, h_3, h_4] = [12.4, 12.7, 1.8, 1.4]\)
 - **Sampling Time (\(T_s\))**: \(0.1 \, s\)
-- **Controller Gain (\(K_c\))**: \(1 \, \text{V/cm}\)
-- **Constraints**:
-  - \(\Delta U_{\text{min}} = 5 \times [-1, -1]^T\), \(\Delta U_{\text{max}} = 5 \times [1, 1]^T\)
-  - \(U_{\text{min}} = 0 \times [-1, -1]^T\), \(U_{\text{max}} = 20 \times [1, 1]^T\)
-  - \(Y_{\text{min}}\) and \(Y_{\text{max}}\) (to be defined)
+- **Controller Gain (\(K_c\))**: \(1 V/cm)
+- **The constraints are**:  
+-  Delta U_{min} = 5*[-1, -1]^T
+-  Delta U_{max} = 5*[1, 1]^T
+-  U_{min} = 0*[-1, -1]^T  
+-  U_{max} = 20*[1, 1]^T 
+
+
 
 The system incorporates integrated white noise as state noise and measurement noise. A Kalman filter (from Project 1) is used for state estimation.
 
